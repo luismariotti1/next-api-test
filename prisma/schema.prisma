@@ -12,6 +12,6 @@ model Pokemon {
   name String
   type String
   hp   Int
-  atk  Decimal @db.Decimal(3, 2)
-  def  Decimal @db.Decimal(3, 2)
+  atk  Decimal @db.Decimal(5, 2)
+  def  Decimal @db.Decimal(5, 2)
 }
