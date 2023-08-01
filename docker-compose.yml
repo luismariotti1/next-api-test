@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+    db:
+        container_name: test_db
+        image: mariadb:latest
+        ports:
+            - '${DB_PORT}:3306'
+        environment:
+            MYSQL_USER: '${DB_USERNAME}'
+            MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+            MYSQL_PASSWORD: '${DB_PASSWORD}'
+            MYSQL_DATABASE: '${DB_DATABASE}'
+        volumes:
+            - db-data:/var/lib/mysql
+
+volumes:
+    db-data:
+        driver: local
